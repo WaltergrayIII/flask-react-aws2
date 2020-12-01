@@ -3,7 +3,7 @@ version: 0.2
 env:
   variables:
     AWS_REGION: "us-west-1"
-    REACT_APP_API_SERVICE_URL: "http://<LOAD_BALANCER_DNS_NAME>"
+    REACT_APP_API_SERVICE_URL: "flask-react-alb-1162623491.us-west-1.elb.amazonaws.com"
 
 phases:
   install:
