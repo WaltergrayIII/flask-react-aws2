@@ -22,14 +22,14 @@ deploy_cluster() {
 
   # users
   template="ecs_users_taskdefinition.json"
-  task_template=$(cat "ecs/$template")
+  task_template=$(cat "$template")
   task_def=$(printf "$task_template" $AWS_ACCOUNT_ID $AWS_RDS_URI $PRODUCTION_SECRET_KEY)
   echo "$task_def"
   register_definition
 
   # client
   template="ecs_client_taskdefinition.json"
-  task_template=$(cat "ecs/$template")
+  task_template=$(cat "$template")
   task_def=$(printf "$task_template" $AWS_ACCOUNT_ID)
   echo "$task_def"
   register_definition
